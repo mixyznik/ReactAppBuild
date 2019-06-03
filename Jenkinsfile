@@ -39,8 +39,8 @@ pipeline {
         dir ('/home/mixy/pencil/pencil_master') {
           sh 'pwd'  
           sh 'npm install'
-          sh 'pkill screen'
-          sh 'screen -d -m npm run start'  
+          sh 'screen -X -S pencil kill'
+          sh 'screen -S pencil -d -m npm run start'  
           sh 'npm run build'  
           sh 'cp -R /home/mixy/pencil/pencil_master/build/. /var/www/html/'
             }
