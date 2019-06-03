@@ -24,17 +24,21 @@ pipeline {
       }
     }
     stage('Change dir') {
-      dir ('/home/mixy/pencil') {
-        sh 'pwd'
-        sh 'cp -R /home/qa/jenkins/workspace/pencil_master /home/mixy/pencil/'
-        sh 'ls'
-     }
-     }  
+      steps {   
+        dir ('/home/mixy/pencil') {
+          sh 'pwd'
+          sh 'cp -R /home/qa/jenkins/workspace/pencil_master /home/mixy/pencil/'
+          sh 'ls'
+       }
+       } 
+    } 
     
     stage('Change dir') {
-      dir ('/home/mixy/pencil/pencil_master') {
-        sh 'pwd'  
-    }
+       steps {  
+        dir ('/home/mixy/pencil/pencil_master') {
+          sh 'pwd'  
+      }
+      }
     }
     stage('build app') {
       steps {  
