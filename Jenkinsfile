@@ -1,5 +1,5 @@
 node {
-  tools {nodejs "nodejs"}
+ 
 
   try {
     stage('Checkout') {
@@ -22,6 +22,8 @@ node {
     dir ('/home/mixy/pencil/pencil_master') {
        sh 'pwd'  
     }
+    tools {nodejs "nodejs"}
+
     stage('build app') {
       sh 'pwd'
       sh 'npm install'
