@@ -39,6 +39,7 @@ pipeline {
           sh 'pwd'  
           sh 'npm install'
           sh 'tmux new-session -d -s "pencil2"'
+          sh 'tmux ls'
           sh 'npm run build'  
           sh 'cp -R /home/mixy/pencil/pencil_master/build/. /var/www/html/'
             }
