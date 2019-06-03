@@ -38,9 +38,6 @@ pipeline {
         dir ('/home/mixy/pencil/pencil_master') {
           sh 'pwd'  
           sh 'npm install'
-          sh 'screen -S pencil -d -m npm run start' 
-          sh 'screen -ls'
-          sh 'screen -X -S pencil quit' 
           sh 'tmux new-session -d -s "pencil2"'
           sh 'tmux send-keys -t "pencil2:1" "npm run start" Enter'
           sh 'npm run build'  
