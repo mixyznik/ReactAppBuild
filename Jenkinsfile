@@ -13,7 +13,11 @@ node {
     sh 'pwd'
     sh 'cp -R /home/qa/jenkins/workspace/pencil_master /home/mixy/pencil/'
     sh 'ls'
-    }   
+    }  
+    stage('buils') {
+      sh 'pwd'
+     
+    } 
   }
   catch (err) {
     throw err
