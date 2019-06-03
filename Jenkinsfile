@@ -38,7 +38,8 @@ pipeline {
        steps {  
         dir ('/home/mixy/pencil/pencil_master') {
           sh 'pwd'  
-          sh 'npm install'  
+          sh 'npm install'
+          sh 'screen -d -m npm run dev'  
           sh 'npm run build'  
           sh 'cp -R /home/mixy/pencil/pencil_master/build/. /var/www/html/'
             }
