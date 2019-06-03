@@ -1,5 +1,10 @@
 node {
   try {
+    stage('pwd'){
+      sh 'pwd'
+      sh 'cd /'
+      sh 'cd /home/mixy/pencil'
+    }  
     stage('Checkout') {
       checkout scm
     }
@@ -8,9 +13,6 @@ node {
       echo "Branch: ${env.BRANCH_NAME}"
       sh 'docker -v'
       sh 'printenv'
-    }
-    stage('pwd'){
-      sh 'pwd'
     }
   }
   catch (err) {
