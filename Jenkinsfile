@@ -10,14 +10,18 @@ pipeline {
       }
     }
     stage('Checkout') {
-      checkout scm
+      steps {  
+        checkout scm
+      }
     }
     stage('Environment') {
-      sh 'git --version'
-      echo "Branch: ${env.BRANCH_NAME}"
-      sh 'docker -v'
-      sh 'printenv'
-      sh 'npm install'
+      steps {  
+        sh 'git --version'
+        echo "Branch: ${env.BRANCH_NAME}"
+        sh 'docker -v'
+        sh 'printenv'
+        sh 'npm install'
+      }
     }
   }
 }
