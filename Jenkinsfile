@@ -16,8 +16,10 @@ node {
     }  
     stage('buils') {
       sh 'pwd'
-     
-    } 
+     } 
+    dir ('/home/mixy/pencil/pencil_master') {
+       sh 'pwd'  
+    }
   }
   catch (err) {
     throw err
