@@ -20,6 +20,10 @@ node {
     dir ('/home/mixy/pencil/pencil_master') {
        sh 'pwd'  
     }
+    stage('build app') {
+      sh 'pwd'
+      sh 'npm install'
+     } 
   }
   catch (err) {
     throw err
