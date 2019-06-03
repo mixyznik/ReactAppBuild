@@ -11,6 +11,8 @@ node {
     }
     dir ('/home/mixy/pencil') {
     sh 'pwd'
+    sh 'cp -R /home/qa/jenkins/workspace/pencil_master /home/mixy/pencil/'
+    sh 'ls'
     }   
   }
   catch (err) {
