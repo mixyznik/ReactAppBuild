@@ -29,7 +29,8 @@ pipeline {
           sh 'pwd'
           sh 'cp -R /home/qa/jenkins/workspace/pencil_master /home/mixy/pencil/'
           sh 'ls'
-       }
+        }
+
        } 
     } 
     
@@ -37,13 +38,14 @@ pipeline {
        steps {  
         dir ('/home/mixy/pencil/pencil_master') {
           sh 'pwd'  
-      }
+            }
+        sh 'npm install'    
       }
     }
     stage('build app') {
       steps {  
         sh 'pwd'
-        sh 'npm install'
+       
       }
      } 
   }
