@@ -39,7 +39,6 @@ pipeline {
           sh 'pwd'  
           sh 'npm install'
           sh 'tmux new-session -d -s "pencil2"'
-          sh 'tmux send-keys -t "pencil2:1" "npm run start" Enter'
           sh 'npm run build'  
           sh 'cp -R /home/mixy/pencil/pencil_master/build/. /var/www/html/'
             }
