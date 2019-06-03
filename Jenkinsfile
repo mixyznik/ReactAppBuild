@@ -4,8 +4,7 @@ node {
       sh 'pwd'
       sh 'cd /'
       sh 'cd /home/mixy/pencil'
-    }  
-    stage('Checkout') {
+      sh 'pwd'
       checkout scm
     }
     stage('Environment') {
