@@ -40,7 +40,7 @@ pipeline {
           sh 'pwd'  
           sh 'npm install'  
           sh 'npm run build'  
-          sh 'cp -R /home/mixy/pencil/pencil_master/build /var/www/'
+          sh 'cp -R /home/mixy/pencil/pencil_master/build/ /var/www/'
             }
         
       }
