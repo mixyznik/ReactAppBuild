@@ -8,6 +8,7 @@ node {
       echo "Branch: ${env.BRANCH_NAME}"
       sh 'docker -v'
       sh 'printenv'
+      
     }
     dir ('/home/mixy/pencil') {
     sh 'pwd'
@@ -21,6 +22,7 @@ node {
        sh 'pwd'  
     }
     
+    tools {nodejs "node"}
 
     stage('build app') {
       sh 'pwd'
