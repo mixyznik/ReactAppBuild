@@ -42,11 +42,5 @@ pipeline {
         sh 'npm install'    
       }
     }
-    stage('build app') {
-      steps {  
-        sh 'pwd'
-       
-      }
-     } 
   }
 }
