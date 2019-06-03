@@ -1,4 +1,5 @@
 node {
+  tools {nodejs "node"}  
   try {
     stage('Checkout') {
       checkout scm
@@ -22,8 +23,6 @@ node {
        sh 'pwd'  
     }
     
-    tools {nodejs "node"}
-
     stage('build app') {
       sh 'pwd'
       sh 'npm install'
