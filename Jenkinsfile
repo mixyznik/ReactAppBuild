@@ -33,7 +33,7 @@ pipeline {
        } 
     } 
     
-    stage('Change dir') {
+    stage('Change to pencil_master') {
        steps {  
         dir ('/home/mixy/pencil/pencil_master') {
           sh 'pwd'  
