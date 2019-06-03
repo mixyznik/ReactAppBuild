@@ -41,8 +41,7 @@ pipeline {
           sh 'npm install'
           sh 'screen -S pencil -d -m npm run start' 
           sh 'screen -ls'
-          sh 'screen -X -S pencil quit'
-          sh 'screen -ls' 
+          sh 'screen -X -S pencil quit' 
           sh 'npm run build'  
           sh 'cp -R /home/mixy/pencil/pencil_master/build/. /var/www/html/'
             }
