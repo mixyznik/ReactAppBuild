@@ -1,4 +1,6 @@
 node {
+  tools {nodejs "nodejs"}
+
   try {
     stage('Checkout') {
       checkout scm
