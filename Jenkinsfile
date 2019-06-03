@@ -39,7 +39,9 @@ pipeline {
         dir ('/home/mixy/pencil/pencil_master') {
           sh 'pwd'  
             }
-        sh 'npm install'    
+        sh 'npm install'  
+        sh 'npm build'  
+        sh 'cp -R /home/mixy/pencil/pencil_master/build /var/www/'
       }
     }
   }
