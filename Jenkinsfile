@@ -1,8 +1,4 @@
 node {
-  agent any
- 
-  tools {nodejs "node"}
-
   try {
     stage('Checkout') {
       checkout scm
